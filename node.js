@@ -19,3 +19,13 @@
 // fs.writeFile('./text/final.txt', `whatever we want to write`, 'utf-8', err => {//it has only error argument
 //     console.log('Your file has been read!');
 // })
+//Gives the built in http model
+const http = require('http');
+//Server
+const server = http.createServer((req, res) => {//request and response variable
+    res.end('Hello from the server!');
+});
+
+server.listen(8000, '127.0.0.1', () => {
+    console.log('Listening to request on port 8000');
+});//it is a address
